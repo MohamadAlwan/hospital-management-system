@@ -16,9 +16,36 @@ explain the APIs for each element(or resource) bellow:
 | --- | --- | --- | --- | --- | --- |
 | GET | /hms/department | 200(OK) | Get all Departments | | | 
 | GET | /hms/department/{id} | 200(OK) | Get Department by id | | | 
-| POST | /hms/department | 201(Created) | Create Department | {depName} | | 
+| POST | /hms/department | 201(Created) | Create new Department | {depName} | | 
 | PUT | /hms/department/{id} | 200(OK) | update existing Department with id | {depName} | |
 | DELETE | /hms/department/{id} | 200(OK) | Delete Department by id | | Deleted successfully | 
+
+# Doctor
+| HTTP Method | URL Path | Status Code | Description | Request | Response |
+| --- | --- | --- | --- | --- | --- |
+| GET | /hms/doctor | 200(OK) | Get all Doctors | | | 
+| GET | /hms/doctor/{id} | 200(OK) | Get Doctor by id | | | 
+| POST | /hms/doctor | 201(Created) | Create new Doctor | {name} {address} {phoneNumber} {specialization} | | 
+| PUT | /hms/doctor/{id} | 200(OK) | update existing Doctor with id | {name} {address} {phoneNumber} {specialization} | |
+| DELETE | /hms/doctor/{id} | 200(OK) | Delete Doctor by id | | Deleted successfully |
+
+# Patent
+| HTTP Method | URL Path | Status Code | Description | Request | Response |
+| --- | --- | --- | --- | --- | --- |
+| GET | /hms/patent | 200(OK) | Get all Patents | | | 
+| GET | /hms/patent/{id} | 200(OK) | Get Patent by id | | | 
+| POST | /hms/patent | 201(Created) | Create new Patent | {name} {address} {phoneNumber} {age} | | 
+| PUT | /hms/patent/{id} | 200(OK) | update existing Patent with id | {name} {address} {phoneNumber} {age} | |
+| DELETE | /hms/patent/{id} | 200(OK) | Delete Patent by id | | Deleted successfully |
+
+# Medicine
+| HTTP Method | URL Path | Status Code | Description | Request | Response |
+| --- | --- | --- | --- | --- | --- |
+| GET | /hms/medicine | 200(OK) | Get all Medicine | | | 
+| GET | /hms/medicine/{id} | 200(OK) | Get Medicine by id | | | 
+| POST | /hms/medicine | 201(Created) | Create new Medicine | {name} {quantity} {price} {description} | | 
+| PUT | /hms/medicine/{id} | 200(OK) | update existing Medicine with id | {name} {quantity} {price} {description} | |
+| DELETE | /hms/medicine/{id} | 200(OK) | Delete Medicine by id | | Deleted successfully |
 
 # Testing:
 Postman/SOAPUI will be good option to use.  
