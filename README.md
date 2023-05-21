@@ -15,10 +15,12 @@ Postman/SOAPUI will be good option to use.
 also you can find a file name Postman test collections contain some testing for this project for all elements
 
 # package the project:
+```ruby
 .\mvnw clean package -DskipTests
-
+```
 # To run the project:
+```ruby
 .\mvnw spring-boot:run
-
+```
 # License:
 https://choosealicense.com/licenses/mit/
