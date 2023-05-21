@@ -15,6 +15,11 @@ explain the APIs for each element(or resource) bellow:
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
 | --- | --- | --- | --- | --- | --- |
 | GET | /hms/department | 200(OK) | Get all Departments | | | 
+| GET | /hms/department/{id} | 200(OK) | Get Department by id | | | 
+| POST | /hms/department | 201(Created) | Create Department | {depName} | | 
+| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | {depName} | |
+| DELETE | /hms/department/{id} | 200(OK) | Delete Department by id | | Deleted successfully | 
+
 # Testing:
 Postman/SOAPUI will be good option to use.  
 also you can find a file name Postman test collections contain some testing for this project for all elements
