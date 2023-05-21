@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "69eb3e85-9498-4b0a-a76c-ed421f1960d2",
+		"name": "Doctor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27278757"
+	},
+	"item": [
+		{
+			"name": "add Dr.Mohamad Elwan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"phoneNumber\":\"05978755\",\r\n\"name\":\"mohamad elwan\",\r\n\"address\":\"Ramallah\",\r\n\"specialization\":\"brain surgery\"\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hms/doctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Dr. Mohamad Kharmah",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"phoneNumber\":\"05978888\",\r\n\"name\":\"mohamad kharmah\",\r\n\"address\":\"Ramallah\",\r\n\"specialization\":\"heart surgery\"\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hms/doctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hms/doctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view Dr. Mohamad Elwan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hms/doctor/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"doctor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change phone number for Dr. Mohamad Kharmah",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"phoneNumber\":\"56874448\",\r\n\"name\":\"mohamad kharmah\",\r\n\"address\":\"Ramallah\",\r\n\"specialization\":\"heart surgery\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hms/doctor/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"doctor",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Dr. Mohamad Kharmah",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hms/doctor/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"doctor",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

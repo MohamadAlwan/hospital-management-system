@@ -1,9 +1,12 @@
 package com.example.hospitalmanagementsystem.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 
 @Data // used instead of creating the setters and getters for the variables
@@ -18,4 +21,8 @@ public class Department {
 
     @Column(nullable = false)// to specify that this is a column
     String depName;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "dep",cascade = CascadeType.ALL)
+    private Set<Doctor> doc;
 }

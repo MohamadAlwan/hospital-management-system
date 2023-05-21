@@ -1,8 +1,11 @@
 package com.example.hospitalmanagementsystem.entity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 
 @Data // used instead of creating the setters and getters for the variables
@@ -26,4 +29,13 @@ public class Patent {
 
     @Column
     int age;
+
+
+    @ManyToMany(mappedBy = "patients",fetch = FetchType.LAZY)
+    @JsonBackReference
+    private Set<Doctor> doctors;
+
+    @ManyToMany(mappedBy = "patents",fetch = FetchType.LAZY)
+    @JsonBackReference
+    private Set<Medicine> medicines;
 }

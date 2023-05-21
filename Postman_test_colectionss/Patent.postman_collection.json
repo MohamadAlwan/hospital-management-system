@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "759544bd-1a40-4194-8948-4885d42f1f23",
+		"name": "Patent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27278757"
+	},
+	"item": [
+		{
+			"name": "add Ahmad Hamed patent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\":\"05975425\",\r\n\"name\":\"ahmad hamed\",\r\n\"address\":\"Ramallah\",\r\n\"age\":\"42\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hms/patent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"patent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Rama Masalmah patent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"phoneNumber\":\"05975115\",\r\n\"name\":\"rama masalmah\",\r\n\"address\":\"Ramallah\",\r\n\"age\":\"24\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hms/patent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"patent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all patent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hms/patent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"patent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view Ahmad Hamed Patent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hms/patent/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"patent",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change patent Rama Masalmah age",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"rama masalmah\",\r\n    \"phoneNumber\": 5975115,\r\n    \"address\": \"Ramallah\",\r\n    \"age\": 26\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hms/patent/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"patent",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove patent Rama Masalmah",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hms/patent/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hms",
+						"patent",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
