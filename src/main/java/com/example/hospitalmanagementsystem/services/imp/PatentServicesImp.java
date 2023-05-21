@@ -27,6 +27,7 @@ public class PatentServicesImp implements PatentServices {
         return patentResponse;
     }
 
+    // convert the data from an entity to DTO
     private PatentDto mapToDTO(Patent patent) {
         PatentDto patentDto = new PatentDto();
         patentDto.setId(patent.getId());
@@ -37,6 +38,7 @@ public class PatentServicesImp implements PatentServices {
         return patentDto;
     }
 
+    // convert the data from DTO to entity
     private Patent mapToEntity(PatentDto patentDto) {
         Patent patent = new Patent();
         patent.setName(patentDto.getName());

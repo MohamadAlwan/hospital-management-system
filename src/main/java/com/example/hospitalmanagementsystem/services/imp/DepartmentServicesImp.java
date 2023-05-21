@@ -28,6 +28,7 @@ public class DepartmentServicesImp implements DepartmentServices {
         return departmentResponse;
     }
 
+    // convert the data from an entity to DTO
     private DepartmentDto mapToDTO(Department department) {
         DepartmentDto departmentDto = new DepartmentDto();
         departmentDto.setId(department.getId());
@@ -35,6 +36,7 @@ public class DepartmentServicesImp implements DepartmentServices {
         return departmentDto;
     }
 
+    // convert the data from DTO to entity
     private Department mapToEntity(DepartmentDto departmentDto) {
         Department department = new Department();
         department.setDepName(departmentDto.getDepName());

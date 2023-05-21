@@ -18,7 +18,7 @@ public class MedicineServicesImp implements MedicineServices {
     public MedicineServicesImp(MedicineRepository medicineRepository) {
         this.medicineRepository = medicineRepository;
     }
-    
+
     @Override
     public MedicineDto createMedicine(MedicineDto medicineDto) {
         Medicine medicine = mapToEntity(medicineDto);
@@ -28,6 +28,7 @@ public class MedicineServicesImp implements MedicineServices {
         return medicineResponse;
     }
 
+    // convert the data from an entity to DTO
     private MedicineDto mapToDTO(Medicine medicine) {
         MedicineDto medicineDto = new MedicineDto();
         medicineDto.setId(medicine.getId());
@@ -38,6 +39,7 @@ public class MedicineServicesImp implements MedicineServices {
         return medicineDto;
     }
 
+    // convert the data from DTO to entity
     private Medicine mapToEntity(MedicineDto medicineDto) {
         Medicine medicine = new Medicine();
         medicine.setName(medicineDto.getName());

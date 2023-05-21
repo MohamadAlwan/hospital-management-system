@@ -28,6 +28,7 @@ public class DoctorServicesImp implements DoctorServices {
         return doctorResponse;
     }
 
+    // convert the data from an entity to DTO
     private DoctorDto mapToDTO(Doctor doctor) {
         DoctorDto doctorDto = new DoctorDto();
         doctorDto.setId(doctor.getId());
@@ -38,6 +39,7 @@ public class DoctorServicesImp implements DoctorServices {
         return doctorDto;
     }
 
+    // convert the data from DTO to entity
     private Doctor mapToEntity(DoctorDto doctorDto) {
         Doctor doctor = new Doctor();
         doctor.setName(doctorDto.getName());
