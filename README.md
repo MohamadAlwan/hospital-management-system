@@ -7,9 +7,14 @@ For each element in the Class Diagram attached above, five APIs are provided for
 - view all records 
 - view exact record
 - add(or create) new record
-- maintain any existing record
+- maintain(or update) any existing record
 - remove(or delete) any record
 
+explain the APIs for each element(or resource) bellow:
+# Department
+| HTTP Method | URL Path | Status Code | Description | Request | Response |
+| --- | --- | --- | --- | --- | --- |
+| GET | /hms/department | 200(OK) | Get all Departments | | | 
 # Testing:
 Postman/SOAPUI will be good option to use.  
 also you can find a file name Postman test collections contain some testing for this project for all elements
