@@ -14,7 +14,22 @@ explain the APIs for each element(or resource) bellow:
 # Department
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
 | --- | --- | --- | --- | --- | --- |
-| GET | /hms/department | 200(OK) | Get all Departments | | | 
+| GET | /hms/department | 200(OK) | Get all Departments | | [
+    {
+        "id": 1,
+        "name": "mohamad elwan",
+        "address": "Ramallah",
+        "phoneNumber": 5978755,
+        "specialization": "brain surgery"
+    },
+    {
+        "id": 3,
+        "name": "mohamad elwan",
+        "address": "Ramallah",
+        "phoneNumber": 15,
+        "specialization": "sss"
+    }
+]| 
 | GET | /hms/department/{id} | 200(OK) | Get Department by id | | | 
 | POST | /hms/department | 201(Created) | Create new Department | {depName} | | 
 | PUT | /hms/department/{id} | 200(OK) | update existing Department with id | {depName} | |
