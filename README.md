@@ -17,7 +17,7 @@ explain the APIs for each element(or resource) bellow:
 | GET | /hms/department | 200(OK) | Get all Departments | URL:/hms/department | [ { "id": 1, "depName": "Department of Neurology" }, { "id": 2, "depName": "Department of Surgery" } ] | 
 | GET | /hms/department/{id} | 200(OK) | Get Department by id | URL: /hms/department/1 | { "id": 1, "depName": "Department of Neurology" } | 
 | POST | /hms/department | 201(Created) | Create new Department | URL:/hms/department  ```Body```:{ "depName": "Department of Neurology" } | { "id": 1, "depName": "Department of Neurology" } | 
-| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | URL: /hms/department/2  ```Body```: { "phoneNumber":"56874448", "name":"mohamad kharmah", "address":"Ramallah", "specialization":"heart surgery" } | { "id": 2, "name": "mohamad kharmah", "address": "Ramallah", "phoneNumber": 56874448, "specialization": "heart surgery" } |
+| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | URL: /hms/department/2  ```Body```: { "depName":"Department of Neurology and Oncology" } | { "id": 2, "depName": "Department of Neurology and Oncology" } |
 | DELETE | /hms/department/{id} | 200(OK) | Delete Department by id | URL: /hms/department/2  | Deleted successfully | 
 
 # Doctor
@@ -25,8 +25,8 @@ explain the APIs for each element(or resource) bellow:
 | --- | --- | --- | --- | --- | --- |
 | GET | /hms/doctor | 200(OK) | Get all Doctors | URL: /hms/doctor | [ { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" }, { "id": 2, "name": "mohamad kharmah", "address": "Ramallah", "phoneNumber": 5978888, "specialization": "heart surgery" } ] | 
 | GET | /hms/doctor/{id} | 200(OK) | Get Doctor by id | URL: /hms/doctor/1 | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
-| POST | /hms/doctor | 201(Created) | Create new Doctor | URL: /hms/doctor  ```Body```:{ "phoneNumber":"05978755", "name":"mohamad elwan", "address":"Ramallah", "specialization":"brain surgery" } | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
-| PUT | /hms/doctor/{id} | 200(OK) | update existing Doctor with id |  URL: /hms/doctor/2  ```Body```:{ "depName":"Department of Neurology and Oncology" } |{ "id": 2, "depName": "Department of Neurology and Oncology" } |
+| POST | /hms/doctor | 201(Created) | Create new Doctor | URL: /hms/doctor  ```Body```:{ "phoneNumber":"5978755", "name":"mohamad elwan", "address":"Ramallah", "specialization":"brain surgery" } | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
+| PUT | /hms/doctor/{id} | 200(OK) | update existing Doctor with id |  URL: /hms/doctor/2  ```Body```: { "phoneNumber":"56874448", "name":"mohamad kharmah", "address":"Jenin", "specialization":"heart surgery" }| { "id": 2, "name": "mohamad kharmah", "address": "Jenin", "phoneNumber": 56874448, "specialization": "heart surgery" } |
 | DELETE | /hms/doctor/{id} | 200(OK) | Delete Doctor by id | URL:/hms/doctor/2 | Deleted successfully |
 
 # Patent
