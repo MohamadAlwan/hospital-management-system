@@ -49,7 +49,7 @@ explain the APIs for each element(or resource) bellow:
 
 # Testing:
 Postman/SOAPUI will be good option to use.  
-also you can find a file name Postman test collections contain some testing for this project for all elements
+also you can find a file name [Postman test collections](https://github.com/MohamadAlwan/hospital-management-system/tree/master/Postman_test_colectionss) contain some testing for this project for all elements
 
 # package the project:
 ```ruby
