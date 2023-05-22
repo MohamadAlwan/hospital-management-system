@@ -16,8 +16,8 @@ explain the APIs for each element(or resource) bellow:
 | --- | --- | --- | --- | --- | --- |
 | GET | /hms/department | 200(OK) | Get all Departments | URL:/hms/department | [ { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" }, { "id": 2, "name": "mohamad kharmah", "address": "Ramallah", "phoneNumber": 5978888, "specialization": "heart surgery" } ] | 
 | GET | /hms/department/{id} | 200(OK) | Get Department by id | URL: /hms/department/1 | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
-| POST | /hms/department | 201(Created) | Create new Department | URL:/hms/department  '''Body''':{ "phoneNumber":"05978755", "name":"mohamad elwan", "address":"Ramallah", "specialization":"brain surgery" } | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
-| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | URL: /hms/department/2  '''Body''': { "phoneNumber":"56874448", "name":"mohamad kharmah", "address":"Ramallah", "specialization":"heart surgery" } | { "id": 2, "name": "mohamad kharmah", "address": "Ramallah", "phoneNumber": 56874448, "specialization": "heart surgery" } |
+| POST | /hms/department | 201(Created) | Create new Department | URL:/hms/department  ```Body```:{ "phoneNumber":"05978755", "name":"mohamad elwan", "address":"Ramallah", "specialization":"brain surgery" } | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
+| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | URL: /hms/department/2  ```Body```: { "phoneNumber":"56874448", "name":"mohamad kharmah", "address":"Ramallah", "specialization":"heart surgery" } | { "id": 2, "name": "mohamad kharmah", "address": "Ramallah", "phoneNumber": 56874448, "specialization": "heart surgery" } |
 | DELETE | /hms/department/{id} | 200(OK) | Delete Department by id | URL: /hms/department/2  | Deleted successfully | 
 
 # Doctor
