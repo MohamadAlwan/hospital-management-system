@@ -17,7 +17,7 @@ explain the APIs for each element(or resource) bellow:
 | GET | /hms/department | 200(OK) | Get all Departments | URL:/hms/department | [ { "id": 1, "depName": "Department of Neurology" }, { "id": 2, "depName": "Department of Surgery" } ] | 
 | GET | /hms/department/{id} | 200(OK) | Get Department by id | URL: /hms/department/1 | { "id": 1, "depName": "Department of Neurology" } | 
 | POST | /hms/department | 201(Created) | Create new Department | URL:/hms/department  ```Body```:{ "depName": "Department of Neurology" } | { "id": 1, "depName": "Department of Neurology" } | 
-| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | URL: /hms/department/2  ```Body```: { "depName":"Department of Neurology and Oncology" } | { "id": 2, "depName": "Department of Neurology and Oncology" } |
+| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | URL: /hms/department/1  ```Body```: { "depName":"Department of Neurology and Oncology" } | { "id": 1, "depName": "Department of Neurology and Oncology" } |
 | DELETE | /hms/department/{id} | 200(OK) | Delete Department by id | URL: /hms/department/2  | Deleted successfully | 
 
 # Doctor
@@ -32,11 +32,11 @@ explain the APIs for each element(or resource) bellow:
 # Patent
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
 | --- | --- | --- | --- | --- | --- |
-| GET | /hms/patent | 200(OK) | Get all Patents | | | 
-| GET | /hms/patent/{id} | 200(OK) | Get Patent by id | | | 
-| POST | /hms/patent | 201(Created) | Create new Patent | {name} {address} {phoneNumber} {age} | | 
-| PUT | /hms/patent/{id} | 200(OK) | update existing Patent with id | {name} {address} {phoneNumber} {age} | |
-| DELETE | /hms/patent/{id} | 200(OK) | Delete Patent by id | | Deleted successfully |
+| GET | /hms/patent | 200(OK) | Get all Patents |  URL:/hms/patent/ | [ { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 }, { "id": 2, "name": "rama masalmah", "phoneNumber": 5975115, "address": "Ramallah", "age": 24 } ] | 
+| GET | /hms/patent/{id} | 200(OK) | Get Patent by id |  URL:/hms/patent/1 | { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 } | 
+| POST | /hms/patent | 201(Created) | Create new Patent | URL: /hms/patent  ```Body```:{ "phoneNumber":"05975425", "name":"ahmad hamed", "address":"Ramallah", "age":"42" } | { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 } | 
+| PUT | /hms/patent/{id} | 200(OK) | update existing Patent with id |URL:/hms/patent/2 ```Body```:{ "name": "rama masalmah", "phoneNumber": 5611111, "address": "Ramallah", "age": 26 } | { "id":2,"name": "rama masalmah", "phoneNumber": 5611111, "address": "Ramallah", "age": 26 } |
+| DELETE | /hms/patent/{id} | 200(OK) | Delete Patent by id |  URL:/hms/patent/2  | Deleted successfully |
 
 # Medicine
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
