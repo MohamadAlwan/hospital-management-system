@@ -14,38 +14,38 @@ explain the APIs for each element(or resource) bellow:
 # Department
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
 | --- | --- | --- | --- | --- | --- |
-| GET | /hms/department | 200(OK) | Get all Departments | URL:/hms/department | [ { "id": 1, "depName": "Department of Neurology" }, { "id": 2, "depName": "Department of Surgery" } ] | 
-| GET | /hms/department/{id} | 200(OK) | Get Department by id | URL: /hms/department/1 | { "id": 1, "depName": "Department of Neurology" } | 
-| POST | /hms/department | 201(Created) | Create new Department | URL:/hms/department  ```Body```:{ "depName": "Department of Neurology" } | { "id": 1, "depName": "Department of Neurology" } | 
-| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | URL: /hms/department/1  ```Body```: { "depName":"Department of Neurology and Oncology" } | { "id": 1, "depName": "Department of Neurology and Oncology" } |
-| DELETE | /hms/department/{id} | 200(OK) | Delete Department by id | URL: /hms/department/2  | Deleted successfully | 
+| GET | /hms/department | 200(OK) | Get all Departments | ```URL```:/hms/department | [ { "id": 1, "depName": "Department of Neurology" }, { "id": 2, "depName": "Department of Surgery" } ] | 
+| GET | /hms/department/{id} | 200(OK) | Get Department by id | ```URL```: /hms/department/1 | { "id": 1, "depName": "Department of Neurology" } | 
+| POST | /hms/department | 201(Created) | Create new Department | ```URL```:/hms/department  ```Body```:{ "depName": "Department of Neurology" } | { "id": 1, "depName": "Department of Neurology" } | 
+| PUT | /hms/department/{id} | 200(OK) | update existing Department with id | ```URL```: /hms/department/1  ```Body```: { "depName":"Department of Neurology and Oncology" } | { "id": 1, "depName": "Department of Neurology and Oncology" } |
+| DELETE | /hms/department/{id} | 200(OK) | Delete Department by id | ```URL```: /hms/department/2  | Deleted successfully | 
 
 # Doctor
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
 | --- | --- | --- | --- | --- | --- |
-| GET | /hms/doctor | 200(OK) | Get all Doctors | URL: /hms/doctor | [ { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" }, { "id": 2, "name": "mohamad kharmah", "address": "Ramallah", "phoneNumber": 5978888, "specialization": "heart surgery" } ] | 
+| GET | /hms/doctor | 200(OK) | Get all Doctors | ```URL```: /hms/doctor | [ { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" }, { "id": 2, "name": "mohamad kharmah", "address": "Ramallah", "phoneNumber": 5978888, "specialization": "heart surgery" } ] | 
 | GET | /hms/doctor/{id} | 200(OK) | Get Doctor by id | URL: /hms/doctor/1 | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
-| POST | /hms/doctor | 201(Created) | Create new Doctor | URL: /hms/doctor  ```Body```:{ "phoneNumber":"5978755", "name":"mohamad elwan", "address":"Ramallah", "specialization":"brain surgery" } | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
-| PUT | /hms/doctor/{id} | 200(OK) | update existing Doctor with id |  URL: /hms/doctor/2  ```Body```: { "phoneNumber":"56874448", "name":"mohamad kharmah", "address":"Jenin", "specialization":"heart surgery" }| { "id": 2, "name": "mohamad kharmah", "address": "Jenin", "phoneNumber": 56874448, "specialization": "heart surgery" } |
-| DELETE | /hms/doctor/{id} | 200(OK) | Delete Doctor by id | URL:/hms/doctor/2 | Deleted successfully |
+| POST | /hms/doctor | 201(Created) | Create new Doctor | ```URL```: /hms/doctor  ```Body```:{ "phoneNumber":"5978755", "name":"mohamad elwan", "address":"Ramallah", "specialization":"brain surgery" } | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
+| PUT | /hms/doctor/{id} | 200(OK) | update existing Doctor with id |  ```URL```: /hms/doctor/2  ```Body```: { "phoneNumber":"56874448", "name":"mohamad kharmah", "address":"Jenin", "specialization":"heart surgery" }| { "id": 2, "name": "mohamad kharmah", "address": "Jenin", "phoneNumber": 56874448, "specialization": "heart surgery" } |
+| DELETE | /hms/doctor/{id} | 200(OK) | Delete Doctor by id | ```URL```:/hms/doctor/2 | Deleted successfully |
 
 # Patent
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
 | --- | --- | --- | --- | --- | --- |
-| GET | /hms/patent | 200(OK) | Get all Patents |  URL:/hms/patent/ | [ { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 }, { "id": 2, "name": "rama masalmah", "phoneNumber": 5975115, "address": "Ramallah", "age": 24 } ] | 
-| GET | /hms/patent/{id} | 200(OK) | Get Patent by id |  URL:/hms/patent/1 | { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 } | 
-| POST | /hms/patent | 201(Created) | Create new Patent | URL: /hms/patent  ```Body```:{ "phoneNumber":"05975425", "name":"ahmad hamed", "address":"Ramallah", "age":"42" } | { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 } | 
-| PUT | /hms/patent/{id} | 200(OK) | update existing Patent with id |URL:/hms/patent/2 ```Body```:{ "name": "rama masalmah", "phoneNumber": 5611111, "address": "Ramallah", "age": 26 } | { "id":2,"name": "rama masalmah", "phoneNumber": 5611111, "address": "Ramallah", "age": 26 } |
-| DELETE | /hms/patent/{id} | 200(OK) | Delete Patent by id |  URL:/hms/patent/2  | Deleted successfully |
+| GET | /hms/patent | 200(OK) | Get all Patents |  ```URL```:/hms/patent | [ { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 }, { "id": 2, "name": "rama masalmah", "phoneNumber": 5975115, "address": "Ramallah", "age": 24 } ] | 
+| GET | /hms/patent/{id} | 200(OK) | Get Patent by id |  ```URL```:/hms/patent/1 | { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 } | 
+| POST | /hms/patent | 201(Created) | Create new Patent | ```URL```: /hms/patent  ```Body```:{ "phoneNumber":"05975425", "name":"ahmad hamed", "address":"Ramallah", "age":"42" } | { "id": 1, "name": "ahmad hamed", "phoneNumber": 5975425, "address": "Ramallah", "age": 42 } | 
+| PUT | /hms/patent/{id} | 200(OK) | update existing Patent with id |```URL```:/hms/patent/2 ```Body```:{ "name": "rama masalmah", "phoneNumber": 5611111, "address": "Ramallah", "age": 26 } | { "id":2,"name": "rama masalmah", "phoneNumber": 5611111, "address": "Ramallah", "age": 26 } |
+| DELETE | /hms/patent/{id} | 200(OK) | Delete Patent by id |  ```URL```:/hms/patent/2  | Deleted successfully |
 
 # Medicine
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
 | --- | --- | --- | --- | --- | --- |
-| GET | /hms/medicine | 200(OK) | Get all Medicine | | | 
-| GET | /hms/medicine/{id} | 200(OK) | Get Medicine by id | | | 
-| POST | /hms/medicine | 201(Created) | Create new Medicine | {name} {quantity} {price} {description} | | 
-| PUT | /hms/medicine/{id} | 200(OK) | update existing Medicine with id | {name} {quantity} {price} {description} | |
-| DELETE | /hms/medicine/{id} | 200(OK) | Delete Medicine by id | | Deleted successfully |
+| GET | /hms/medicine | 200(OK) | Get all Medicine |  ```URL```:/hms/medicine | [ { "id": 1, "quantity": 150, "price": 74.0, "name": "Dabigatran", "description": "used to prevent strokes in those with atrial fibrillation not caused by heart valve issues" }, { "id": 2, "quantity": 80, "price": 120.5, "name": "Edoxaban", "description": "preventing blood clots in people with nonvalvular atrial fibrillation who also have at least one risk factor" } ] | 
+| GET | /hms/medicine/{id} | 200(OK) | Get Medicine by id | ```URL```:/hms/medicine/2 | { "id": 2, "quantity": 80, "price": 120.5, "name": "Edoxaban", "description": "preventing blood clots in people with nonvalvular atrial fibrillation who also have at least one risk factor" } | 
+| POST | /hms/medicine | 201(Created) | Create new Medicine | ```URL```:/hms/medicine ```Body```:{ "quantity":"150" ,"price":"74" ,"name":"Dabigatran" ,"description":"used to prevent strokes in those with atrial fibrillation not caused by heart valve issues" } | { "id": 1, "quantity": 150, "price": 74.0, "name": "Dabigatran", "description": "used to prevent strokes in those with atrial fibrillation not caused by heart valve issues" } | 
+| PUT | /hms/medicine/{id} | 200(OK) | update existing Medicine with id |```URL```:/hms/medicine/2  ```Body```:{ "quantity": 75, "price": 99.5, "name": "Edoxaban", "description": "preventing blood clots in people with nonvalvular atrial fibrillation who also have at least one risk factor" } | {"id":2, "quantity": 75, "price": 99.5, "name": "Edoxaban", "description": "preventing blood clots in people with nonvalvular atrial fibrillation who also have at least one risk factor" } |
+| DELETE | /hms/medicine/{id} | 200(OK) | Delete Medicine by id | URL:/hms/medicine/2 | Deleted successfully |
 
 # Testing:
 Postman/SOAPUI will be good option to use.  
