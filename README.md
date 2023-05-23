@@ -24,7 +24,7 @@ explain the APIs for each element(or resource) bellow:
 | HTTP Method | URL Path | Status Code | Description | Request | Response |
 | --- | --- | --- | --- | --- | --- |
 | GET | /hms/doctor | 200(OK) | Get all Doctors | ```URL```: /hms/doctor | [ { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" }, { "id": 2, "name": "mohamad kharmah", "address": "Ramallah", "phoneNumber": 5978888, "specialization": "heart surgery" } ] | 
-| GET | /hms/doctor/{id} | 200(OK) | Get Doctor by id | URL: /hms/doctor/1 | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
+| GET | /hms/doctor/{id} | 200(OK) | Get Doctor by id | ```URL```: /hms/doctor/1 | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
 | POST | /hms/doctor | 201(Created) | Create new Doctor | ```URL```: /hms/doctor  ```Body```:{ "phoneNumber":"5978755", "name":"mohamad elwan", "address":"Ramallah", "specialization":"brain surgery" } | { "id": 1, "name": "mohamad elwan", "address": "Ramallah", "phoneNumber": 5978755, "specialization": "brain surgery" } | 
 | PUT | /hms/doctor/{id} | 200(OK) | update existing Doctor with id |  ```URL```: /hms/doctor/2  ```Body```: { "phoneNumber":"56874448", "name":"mohamad kharmah", "address":"Jenin", "specialization":"heart surgery" }| { "id": 2, "name": "mohamad kharmah", "address": "Jenin", "phoneNumber": 56874448, "specialization": "heart surgery" } |
 | DELETE | /hms/doctor/{id} | 200(OK) | Delete Doctor by id | ```URL```:/hms/doctor/2 | Deleted successfully |
@@ -45,7 +45,7 @@ explain the APIs for each element(or resource) bellow:
 | GET | /hms/medicine/{id} | 200(OK) | Get Medicine by id | ```URL```:/hms/medicine/2 | { "id": 2, "quantity": 80, "price": 120.5, "name": "Edoxaban", "description": "preventing blood clots in people with nonvalvular atrial fibrillation who also have at least one risk factor" } | 
 | POST | /hms/medicine | 201(Created) | Create new Medicine | ```URL```:/hms/medicine ```Body```:{ "quantity":"150" ,"price":"74" ,"name":"Dabigatran" ,"description":"used to prevent strokes in those with atrial fibrillation not caused by heart valve issues" } | { "id": 1, "quantity": 150, "price": 74.0, "name": "Dabigatran", "description": "used to prevent strokes in those with atrial fibrillation not caused by heart valve issues" } | 
 | PUT | /hms/medicine/{id} | 200(OK) | update existing Medicine with id |```URL```:/hms/medicine/2  ```Body```:{ "quantity": 75, "price": 99.5, "name": "Edoxaban", "description": "preventing blood clots in people with nonvalvular atrial fibrillation who also have at least one risk factor" } | {"id":2, "quantity": 75, "price": 99.5, "name": "Edoxaban", "description": "preventing blood clots in people with nonvalvular atrial fibrillation who also have at least one risk factor" } |
-| DELETE | /hms/medicine/{id} | 200(OK) | Delete Medicine by id | URL:/hms/medicine/2 | Deleted successfully |
+| DELETE | /hms/medicine/{id} | 200(OK) | Delete Medicine by id | ```URL```:/hms/medicine/2 | Deleted successfully |
 
 # Testing:
 Postman/SOAPUI will be good option to use.  
